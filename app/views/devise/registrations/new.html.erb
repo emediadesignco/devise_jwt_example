@@ -1,0 +1,21 @@
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { class: "form-signin"}) do |f| %>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+    <%= devise_error_messages! %>
+    <h2 class="form-signin-header">Sign In</h2>
+      <%= f.label :email, class: 'sr-only' %>
+      <%= f.email_field :email, autofocus: true, id: 'inputEmail', class: 'form-control', placeholder: 'Email address', required: true %>
+      <%= f.label :password, class: 'sr-only' %><br />
+      <% if @minimum_password_length %>
+      <em>(<%= @minimum_password_length %> characters minimum)</em>
+      <% end %><br />
+      <%= f.password_field :password, autocomplete: "off", id: 'inputPassword', class: 'form-control', placeholder: 'Password', required: true %>
+      <%= f.label :password_confirmation, class: 'sr-only' %>
+      <%= f.password_field :password_confirmation, autocomplete: "off", id: 'inputPasswordConfirmation', class: 'form-control', placeholder: 'Password', required: true %>
+
+    <div class="actions">
+      <%= f.submit "Sign up", class: "btn btn-lg btn-primary btn-block" %>
+    </div>
+    <%= render "devise/shared/links" %>
+<% end %>
+
