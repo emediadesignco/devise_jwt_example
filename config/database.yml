@@ -23,4 +23,4 @@ test:
 production:
   <<: *default
   adapter: postgresql
-  database: devise_jwt_example
+  url: <%= ENV['DATABASE_URL'] %>
