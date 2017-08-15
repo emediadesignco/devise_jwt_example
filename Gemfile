@@ -58,3 +58,6 @@ gem 'devise'
 gem 'devise-jwt'
 gem 'bootstrap'
 gem 'jquery-rails'
+
+# Additional gems for Heroku deployment
+gem 'pg'
